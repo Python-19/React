@@ -1,11 +1,12 @@
 import {useState} from 'react'
-
+import './GetCurrentTime.css'
 const GetCurrentTime = () => {
-  const [currtime, setcurrtime] = useState();
+  let time = new Date().toLocaleTimeString();
+  const [currtime, setcurrtime] = useState(time);
    
   const CurrTime = ()=>{
-    const time=new Date().toLocaleTimeString();
-    setcurrtime(time);
+    let times=new Date().toLocaleTimeString();
+    setcurrtime(times);
   }
   return (
     <div>
